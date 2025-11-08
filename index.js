@@ -76,11 +76,11 @@
 //       res.status(404).json({ success: false, message: "Route not found" });
 //     });
 
-//     // ----------- SERVER RUN -----------
-//     app.listen(port, () => console.log(`bistroBoss Server running on port ${port}`));
-//   } catch (error) {
-//     console.error("Database connection failed:", error);
-//   }
-// }
+    // ----------- SERVER RUN -----------
+    app.listen(port, () => console.log(`bistroBoss Server running on port ${port}`));
+  } catch (error) {
+    console.error("Database connection failed:", error);
+  }
+}
 
-// runServer();
+runServer();
