@@ -71,10 +71,10 @@
 //       }
 //     });
 
-//     // ----------- 404 HANDLER -----------
-//     app.use((req, res) => {
-//       res.status(404).json({ success: false, message: "Route not found" });
-//     });
+    // ----------- 404 HANDLER -----------
+    app.use((req, res) => {
+      res.status(404).json({ success: false, message: "Route not found" });
+    });
 
     // ----------- SERVER RUN -----------
     app.listen(port, () => console.log(`bistroBoss Server running on port ${port}`));
