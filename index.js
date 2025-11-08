@@ -60,16 +60,16 @@
 //     app.use("/carts", cartRoutes);
 
 
-//     // ----------- ROOT -----------
-//     app.get("/", async (req, res) => {
-//       try {
-//         await client.db("admin").command({ ping: 1 });
-//         res.send("bistroBoss Server is running port 5000 !");
-//       } catch (error) {
-//         console.error(" Ping failed:", error);
-//         res.status(500).send("Database connection failed");
-//       }
-//     });
+    // ----------- ROOT -----------
+    app.get("/", async (req, res) => {
+      try {
+        await client.db("admin").command({ ping: 1 });
+        res.send("bistroBoss Server is running port 5000 !");
+      } catch (error) {
+        console.error(" Ping failed:", error);
+        res.status(500).send("Database connection failed");
+      }
+    });
 
     // ----------- 404 HANDLER -----------
     app.use((req, res) => {
