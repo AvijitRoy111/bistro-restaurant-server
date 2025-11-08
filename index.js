@@ -48,11 +48,11 @@
 //   }).send({ success: true });
 // });
 
-// // ----------- DATABASE CONNECTION + SERVER START -----------
-// async function runServer() {
-//   try {
-//     await client.connect();
-//     console.log(" Database connected successfully!");
+// ----------- DATABASE CONNECTION + SERVER START -----------
+async function runServer() {
+  try {
+    await client.connect();
+    console.log(" Database connected successfully!");
 
     // ----------- ROUTES -----------
     app.use("/menuItems", menuRoutes);
