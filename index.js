@@ -16,13 +16,13 @@
 // const app = express();
 // const port = process.env.PORT || 5000;
 
-// // ----------- MIDDLEWARES -----------
-// app.use(cors({
-//   origin: true,
-//   credentials: true,
-// }));
-// app.use(express.json());
-// app.use(cookieParser());
+// ----------- MIDDLEWARES -----------
+app.use(cors({
+  origin: true,
+  credentials: true,
+}));
+app.use(express.json());
+app.use(cookieParser());
 
 // ----------- JWT CREATE -----------
 app.post("/jwt", async (req, res) => {
