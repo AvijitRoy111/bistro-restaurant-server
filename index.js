@@ -39,14 +39,14 @@
 //   }).send({ success: true, token });
 // });
 
-// // ----------- LOGOUT -----------
-// app.get("/logout", (req, res) => {
-//   res.clearCookie("token", {
-//     httpOnly: true,
-//     secure: process.env.NODE_ENV === "production",
-//     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-//   }).send({ success: true });
-// });
+// ----------- LOGOUT -----------
+app.get("/logout", (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+  }).send({ success: true });
+});
 
 // ----------- DATABASE CONNECTION + SERVER START -----------
 async function runServer() {
