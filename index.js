@@ -54,10 +54,10 @@
 //     await client.connect();
 //     console.log(" Database connected successfully!");
 
-//     // ----------- ROUTES -----------
-//     app.use("/menuItems", menuRoutes);
-//     app.use("/reviews", reviewRoutes);
-//     app.use("/carts", cartRoutes);
+    // ----------- ROUTES -----------
+    app.use("/menuItems", menuRoutes);
+    app.use("/reviews", reviewRoutes);
+    app.use("/carts", cartRoutes);
 
 
     // ----------- ROOT -----------
