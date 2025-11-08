@@ -5,16 +5,16 @@
 // require("dotenv").config();
 // const client = require("./src/helpers/client");
 
-// // Import Routes
-// const menuRoutes = require("./src/routes/menuroutes");
-// const reviewRoutes = require("./src/routes/reveiwroutes");
-// const cartRoutes = require("./src/routes/cartroutes");
+// Import Routes
+const menuRoutes = require("./src/routes/menuroutes");
+const reviewRoutes = require("./src/routes/reveiwroutes");
+const cartRoutes = require("./src/routes/cartroutes");
 
-// // Import Middleware
-// const verifyToken = require("./src/midilewares/verifyToken");
+// Import Middleware
+const verifyToken = require("./src/midilewares/verifyToken");
 
-// const app = express();
-// const port = process.env.PORT || 5000;
+const app = express();
+const port = process.env.PORT || 5000;
 
 // ----------- MIDDLEWARES -----------
 app.use(cors({
