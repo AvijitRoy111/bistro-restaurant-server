@@ -1,6 +1,6 @@
-// const express = require("express");
-// const verifyToken = require("../midilewares/verifyToken");
-// const { createbookings, getbookings, updatebooking } = require("../controllers/bookingController");
+const express = require("express");
+const verifyToken = require("../midilewares/verifyToken");
+const { createbookings, getbookings, updatebooking } = require("../controllers/bookingController");
 
 // const router = express.Router();
 
