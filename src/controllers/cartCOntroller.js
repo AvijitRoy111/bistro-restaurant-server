@@ -15,12 +15,12 @@ const createCarts = async (req, res) => {
   res.send(result);
 };
 
-// // Get user's cart
-// const getCarts = async (req, res) => {
-//   const query = req.query.email ? { userEmail: req.query.email } : {};
-//   const result = await cartsCollection.find(query).toArray();
-//   res.send(result);
-// };
+// Get user's cart
+const getCarts = async (req, res) => {
+  const query = req.query.email ? { userEmail: req.query.email } : {};
+  const result = await cartsCollection.find(query).toArray();
+  res.send(result);
+};
 
 // // Update order status
 // const updateCartStatus = async (req, res) => {
