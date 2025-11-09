@@ -5,18 +5,18 @@ const client = require("../helpers/client");
 const bookinsCollection = client.db("bistroRestaurant").collection("bookings");
 
 
-// // 1. Get All reveiws
-// const getbookings = async (req, res) => {
-//     const bookings = await bookinsCollection.find().toArray();
-//     res.status(200).json({ success: true, message: "All reveiws", data: bookings });
-// };
+// 1. Get All reveiws
+const getbookings = async (req, res) => {
+    const bookings = await bookinsCollection.find().toArray();
+    res.status(200).json({ success: true, message: "All reveiws", data: bookings });
+};
 
-// // 2. Create reveiw
-// const createbookings = async (req, res) => {
-//     const bookingsData = req.body;
-//     const result = await bookinsCollection.insertOne(bookingsData);
-//     res.status(200).json({ success: true, message: "reveiws created", data: result });
-// };
+// 2. Create reveiw
+const createbookings = async (req, res) => {
+    const bookingsData = req.body;
+    const result = await bookinsCollection.insertOne(bookingsData);
+    res.status(200).json({ success: true, message: "reveiws created", data: result });
+};
 
 
 // // 3.update manage booking
