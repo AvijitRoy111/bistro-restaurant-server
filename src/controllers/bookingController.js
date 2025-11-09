@@ -34,8 +34,8 @@ const updatebooking = async (req, res) => {
 
 
 
-// module.exports = {
-//     getbookings,
-//     createbookings,
-//     updatebooking
-// };
+module.exports = {
+    getbookings,
+    createbookings,
+    updatebooking
+};
