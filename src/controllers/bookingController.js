@@ -19,10 +19,10 @@ const createbookings = async (req, res) => {
 };
 
 
-// // 3.update manage booking
-// const updatebooking = async (req, res) => {
-//   const id = req.params.id;
-//   const { status } = req.body;
+// 3.update manage booking
+const updatebooking = async (req, res) => {
+  const id = req.params.id;
+  const { status } = req.body;
 
 //   const result = await bookinsCollection.updateOne(
 //     { _id: new ObjectId(id) },
