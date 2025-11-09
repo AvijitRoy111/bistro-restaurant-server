@@ -1,8 +1,8 @@
-// // src/controllers/reviewController.js
-// const { ObjectId } = require("mongodb");
-// const client = require("../helpers/client");
+// src/controllers/reviewController.js
+const { ObjectId } = require("mongodb");
+const client = require("../helpers/client");
 
-// const bookinsCollection = client.db("bistroRestaurant").collection("bookings");
+const bookinsCollection = client.db("bistroRestaurant").collection("bookings");
 
 
 // // 1. Get All reveiws
