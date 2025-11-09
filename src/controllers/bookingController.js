@@ -24,10 +24,10 @@ const updatebooking = async (req, res) => {
   const id = req.params.id;
   const { status } = req.body;
 
-//   const result = await bookinsCollection.updateOne(
-//     { _id: new ObjectId(id) },
-//     { $set: { status } }
-//   );
+  const result = await bookinsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
 
 //   res.status(200).json({ success: true, message: "Booking status updated", data: result });
 // };
