@@ -41,10 +41,10 @@ const getAllOrders = async (req, res) => {
   res.send(result);
 };
 
-// module.exports =
-// {
-//   createCarts,
-//   getCarts,
-//   updateCartStatus,
-//   getAllOrders
-// };
+module.exports =
+{
+  createCarts,
+  getCarts,
+  updateCartStatus,
+  getAllOrders
+};
