@@ -35,11 +35,11 @@ const updateCartStatus = async (req, res) => {
   res.send(result);
 };
 
-// // Get all orders (for ManageOrder page)
-// const getAllOrders = async (req, res) => {
-//   const result = await cartsCollection.find().toArray();
-//   res.send(result);
-// };
+// Get all orders (for ManageOrder page)
+const getAllOrders = async (req, res) => {
+  const result = await cartsCollection.find().toArray();
+  res.send(result);
+};
 
 // module.exports =
 // {
