@@ -22,18 +22,18 @@ const getCarts = async (req, res) => {
   res.send(result);
 };
 
-// // Update order status
-// const updateCartStatus = async (req, res) => {
-//   const { id } = req.params;
-//   const { status } = req.body;
+// Update order status
+const updateCartStatus = async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
 
-//   const result = await cartsCollection.updateOne(
-//     { _id: new ObjectId(id) },
-//     { $set: { status } }
-//   );
+  const result = await cartsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
 
-//   res.send(result);
-// };
+  res.send(result);
+};
 
 // // Get all orders (for ManageOrder page)
 // const getAllOrders = async (req, res) => {
