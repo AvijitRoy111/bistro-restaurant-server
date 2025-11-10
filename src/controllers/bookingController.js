@@ -1,41 +1,49 @@
-// src/controllers/reviewController.js
-const { ObjectId } = require("mongodb");
-const client = require("../helpers/client");
+// const { ObjectId } = require("mongodb");
+// const client = require("../helpers/client");
 
-const bookinsCollection = client.db("bistroRestaurant").collection("bookings");
+// const bookingsCollection = client.db("bistroRestaurant").collection("bookings");
 
+// // Get All Bookings
+// const getBookings = async (req, res) => {
+//   const bookings = await bookingsCollection.find().toArray();
+//   res.status(200).json({ success: true, message: "All bookings", data: bookings });
+// };
 
-// 1. Get All reveiws
-const getbookings = async (req, res) => {
-    const bookings = await bookinsCollection.find().toArray();
-    res.status(200).json({ success: true, message: "All reveiws", data: bookings });
-};
+// // Create Booking
+// const createBooking = async (req, res) => {
+//   const bookingData = req.body;
+//   const result = await bookingsCollection.insertOne(bookingData);
+//   res.status(200).json({ success: true, message: "Booking created", data: result });
+// };
 
-// 2. Create reveiw
-const createbookings = async (req, res) => {
-    const bookingsData = req.body;
-    const result = await bookinsCollection.insertOne(bookingsData);
-    res.status(200).json({ success: true, message: "reveiws created", data: result });
-};
+// //  Update Booking Status
+// const updateBooking = async (req, res) => {
+//   const id = req.params.id;
+//   const { status } = req.body;
 
+//   const result = await bookingsCollection.updateOne(
+//     { _id: new ObjectId(id) },
+//     { $set: { status } }
+//   );
 
-// 3.update manage booking
-const updatebooking = async (req, res) => {
-  const id = req.params.id;
-  const { status } = req.body;
+//   res.status(200).json({ success: true, message: "Booking status updated", data: result });
+// };
 
-  const result = await bookinsCollection.updateOne(
-    { _id: new ObjectId(id) },
-    { $set: { status } }
-  );
+// // Delete Booking
+// const deleteBooking = async (req, res) => {
+//   const id = req.params.id;
+//   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
 
-  res.status(200).json({ success: true, message: "Booking status updated", data: result });
-};
+//   if (result.deletedCount === 0) {
+//     return res.status(404).json({ success: false, message: "Booking not found" });
+//   }
 
+//   res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
+// };
 
-
-module.exports = {
-    getbookings,
-    createbookings,
-    updatebooking
-};
+// module.exports = {
+//   getBookings,
+//   createBooking,
+//   updateBooking,
+//   deleteBooking,
+// };

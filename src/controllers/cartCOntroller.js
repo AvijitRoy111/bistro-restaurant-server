@@ -32,13 +32,23 @@ const updateCartStatus = async (req, res) => {
     { $set: { status } }
   );
 
+  res.send({ success: true, data: result });
+};
+
+// Get all or filtered orders (for ManageOrder)
+const getAllOrders = async (req, res) => {
+  const status = req.query.status;
+  const query = status ? { status } : {};
+  const result = await cartsCollection.find(query).toArray();
   res.send(result);
 };
 
-// Get all orders (for ManageOrder page)
-const getAllOrders = async (req, res) => {
-  const result = await cartsCollection.find().toArray();
-  res.send(result);
+
+// Delete order
+const deleteOrder = async (req, res) => {
+  const id = req.params.id;
+  const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
+  res.status(200).json({ success: true, message: "order deleted", data: result });
 };
 
 module.exports =
@@ -46,5 +56,6 @@ module.exports =
   createCarts,
   getCarts,
   updateCartStatus,
-  getAllOrders
+  getAllOrders,
+  deleteOrder
 };
