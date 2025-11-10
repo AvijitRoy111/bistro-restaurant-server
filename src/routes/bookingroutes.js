@@ -6,7 +6,7 @@ const {
   deleteBooking,
 } = require("../controllers/bookingController");
 
-// const router = express.Router();
+const router = express.Router();
 
 // router.get("/", getBookings);
 // router.post("/", createBooking);
