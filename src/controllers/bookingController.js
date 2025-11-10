@@ -1,7 +1,7 @@
-// const { ObjectId } = require("mongodb");
-// const client = require("../helpers/client");
+const { ObjectId } = require("mongodb");
+const client = require("../helpers/client");
 
-// const bookingsCollection = client.db("bistroRestaurant").collection("bookings");
+const bookingsCollection = client.db("bistroRestaurant").collection("bookings");
 
 // // Get All Bookings
 // const getBookings = async (req, res) => {
