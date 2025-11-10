@@ -6,4 +6,4 @@ const router = express.Router();
 
 router.post("/", addedContact);
 
-// module.exports = router;
+module.exports = router;
