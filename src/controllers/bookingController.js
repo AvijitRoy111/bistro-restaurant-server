@@ -3,11 +3,11 @@ const client = require("../helpers/client");
 
 const bookingsCollection = client.db("bistroRestaurant").collection("bookings");
 
-// // Get All Bookings
-// const getBookings = async (req, res) => {
-//   const bookings = await bookingsCollection.find().toArray();
-//   res.status(200).json({ success: true, message: "All bookings", data: bookings });
-// };
+// Get All Bookings
+const getBookings = async (req, res) => {
+  const bookings = await bookingsCollection.find().toArray();
+  res.status(200).json({ success: true, message: "All bookings", data: bookings });
+};
 
 // Create Booking
 const createBooking = async (req, res) => {
