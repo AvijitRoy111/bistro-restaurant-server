@@ -16,30 +16,30 @@ const createBooking = async (req, res) => {
   res.status(200).json({ success: true, message: "Booking created", data: result });
 };
 
-// //  Update Booking Status
-// const updateBooking = async (req, res) => {
-//   const id = req.params.id;
-//   const { status } = req.body;
+//  Update Booking Status
+const updateBooking = async (req, res) => {
+  const id = req.params.id;
+  const { status } = req.body;
 
-//   const result = await bookingsCollection.updateOne(
-//     { _id: new ObjectId(id) },
-//     { $set: { status } }
-//   );
+  const result = await bookingsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
 
-//   res.status(200).json({ success: true, message: "Booking status updated", data: result });
-// };
+  res.status(200).json({ success: true, message: "Booking status updated", data: result });
+};
 
-// // Delete Booking
-// const deleteBooking = async (req, res) => {
-//   const id = req.params.id;
-//   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
+// Delete Booking
+const deleteBooking = async (req, res) => {
+  const id = req.params.id;
+  const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
 
-//   if (result.deletedCount === 0) {
-//     return res.status(404).json({ success: false, message: "Booking not found" });
-//   }
+  if (result.deletedCount === 0) {
+    return res.status(404).json({ success: false, message: "Booking not found" });
+  }
 
-//   res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
-// };
+  res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
+};
 
 // module.exports = {
 //   getBookings,
