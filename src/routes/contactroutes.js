@@ -2,7 +2,7 @@ const express = require("express");
 const { addedContact } = require("../controllers/contactController");
 
 
-// const router = express.Router();
+const router = express.Router();
 
 // router.post("/", addedContact);
 
