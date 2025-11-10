@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get("/", getBookings);
 router.post("/", createBooking);
-// router.patch("/:id", updateBooking);
+router.patch("/:id", updateBooking);
 // router.delete("/:id", deleteBooking); 
 
 // module.exports = router;
