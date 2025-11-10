@@ -41,9 +41,9 @@ const deleteBooking = async (req, res) => {
   res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
 };
 
-// module.exports = {
-//   getBookings,
-//   createBooking,
-//   updateBooking,
-//   deleteBooking,
-// };
+module.exports = {
+  getBookings,
+  createBooking,
+  updateBooking,
+  deleteBooking,
+};
