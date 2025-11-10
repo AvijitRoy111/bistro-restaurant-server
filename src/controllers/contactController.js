@@ -11,6 +11,6 @@ const addedContact = async (req, res) => {
 }
 
 
-// module.exports = {
-//     addedContact
-// };
+module.exports = {
+    addedContact
+};
