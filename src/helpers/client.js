@@ -2,12 +2,15 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // Build the URI from environment variables for security and portability.
 // Prefer a full MONGODB_URI; fall back to DB_USER/DB_PASS if provided.
-const uri = process.env.MONGODB_URI || (process.env.DB_USER && process.env.DB_PASS)
-  ? `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tkbsmtm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
-  : null;
+let uri = null;
+if (process.env.MONGODB_URI) {
+  uri = process.env.MONGODB_URI;
+} else if (process.env.DB_USER && process.env.DB_PASS) {
+  uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tkbsmtm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+}
 
 if (!uri) {
-  console.warn("No MongoDB URI configured. Set MONGODB_URI or MONGODB_URI in environment.");
+  console.error("[MongoClient] No MongoDB URI configured. Set MONGODB_URI or DB_USER+DB_PASS in environment.");
 }
 
 const options = {
