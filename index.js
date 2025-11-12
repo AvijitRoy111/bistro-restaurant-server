@@ -18,7 +18,8 @@ const client = require("./src/helpers/client");
 const verifyToken = require("./src/midilewares/verifyToken");
 
 const app = express();
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
+const port = 5000;
 
 // ----------- MIDDLEWARES -----------
 app.use(cors());
@@ -74,5 +75,5 @@ app.use((req, res) => {
 });
 
 // ----------- SERVER RUN -----------
-module.exports = app;
-//app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+//module.exports = app;
+app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
