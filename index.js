@@ -25,6 +25,10 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
+app.get("/", (req, res)=> {
+  res.send("This is server")
+})
+
 // ----------- JWT CREATE -----------
 // app.post("/jwt", async (req, res) => {
 //   const user = req.body;
@@ -75,4 +79,4 @@ app.use((req, res) => {
 
 // ----------- SERVER RUN -----------
 //module.exports = app;
-app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+// app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
