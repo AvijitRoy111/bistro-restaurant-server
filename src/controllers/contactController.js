@@ -11,6 +11,20 @@ const addedContact = async (req, res) => {
 }
 
 
+const getAllContact = async (req, res) => {
+  const Contacts = await contactCollection.find().toArray();
+  res.status(200).json({ success: true, message: "All Contacts", data: Contacts });
+};
+
+const deleteContact = async (req, res) => {
+  const id = req.params.id;
+  const result = await contactCollection.deleteOne({ _id: new ObjectId(id) });
+  res.status(200).json({ success: true, message: "Contact deleted", data: result });
+};
+
+
 module.exports = {
-    addedContact
+    addedContact,
+    getAllContact,
+    deleteContact
 };

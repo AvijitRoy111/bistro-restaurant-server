@@ -3,7 +3,7 @@ const client = require("../helpers/client");
 
 const cartsCollection = client.db("bistroRestaurant").collection("carts");
 
-// ✅ Place Order to Database (status: pending)
+// Place Order to Database (status: pending)
 const placeOrder = async (req, res) => {
   try {
     const order = req.body;
@@ -17,7 +17,7 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// ✅ Get Pending Orders
+// Get Pending Orders
 const getPendingOrders = async (req, res) => {
   try {
     const result = await cartsCollection.find({ status: "pending" }).toArray();
@@ -27,7 +27,7 @@ const getPendingOrders = async (req, res) => {
   }
 };
 
-// ✅ Update Order Status
+// Update Order Status
 const updateOrderStatus = async (req, res) => {
   try {
     const { id } = req.params;
@@ -44,7 +44,7 @@ const updateOrderStatus = async (req, res) => {
   }
 };
 
-// ✅ Delete Order
+//  Delete Order
 const deleteOrder = async (req, res) => {
   try {
     const { id } = req.params;

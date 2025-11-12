@@ -12,6 +12,7 @@ const cartRoutes = require("./src/routes/cartroutes");
 const  bookingRoutes = require("./src/routes/bookingroutes")
 const orderRoutes = require("./src/routes/orderroutes")
 const contactRoutes = require("./src/routes/contactroutes")
+const usersRoutes= require("./src/routes/userroutes")
 
 // Import Middleware
 const verifyToken = require("./src/midilewares/verifyToken");
@@ -64,6 +65,7 @@ async function runServer() {
     app.use("/orders", orderRoutes);
     app.use("/bookings", bookingRoutes);
     app.use("/contacts", contactRoutes);
+    app.use("/users", usersRoutes);
 
 
     // ----------- ROOT -----------
