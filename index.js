@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -17,17 +18,17 @@ const client = require("./src/helpers/client");
 const verifyToken = require("./src/midilewares/verifyToken");
 
 const app = express();
-// const port = process.env.PORT || 5000;
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // ----------- MIDDLEWARES -----------
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
-app.get("/", (req, res)=> {
-  res.send("This is server")
-})
+// basic root route
+app.get("/", (req, res) => {
+  res.send("This is server");
+});
 
 // ----------- JWT CREATE -----------
 // app.post("/jwt", async (req, res) => {
@@ -66,10 +67,19 @@ app.get("/", (req, res)=> {
     app.use("/users", usersRoutes);
 
 
-// ----------- ROOT -----------
-app.get("/", async (req, res) => {
-  await client.db("admin").command({ ping: 1 });
-  res.send("Solosphere Server is running 500");
+// ----------- ROOT (health) -----------
+app.get("/health", async (req, res) => {
+  try {
+    // ensure DB connection before pinging
+    if (client && typeof client.connect === "function") {
+      await client.connect();
+    }
+    await client.client.db("admin").command({ ping: 1 });
+    res.send("Solosphere Server is running");
+  } catch (err) {
+    console.error("Health check failed:", err);
+    res.status(500).send("Health check failed");
+  }
 });
 
 // ----------- 404 -----------
@@ -78,5 +88,10 @@ app.use((req, res) => {
 });
 
 // ----------- SERVER RUN -----------
-// module.exports = app;
-app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+// Export the app for serverless platforms (Vercel). When running locally (node index.js)
+// start the listener so `npm start` still works.
+module.exports = app;
+
+if (require.main === module) {
+  app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+}
