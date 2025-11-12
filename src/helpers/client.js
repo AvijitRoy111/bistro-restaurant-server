@@ -7,7 +7,7 @@ const uri = process.env.MONGODB_URI || (process.env.DB_USER && process.env.DB_PA
   : null;
 
 if (!uri) {
-  console.warn("No MongoDB URI configured. Set MONGODB_URI or DB_USER+DB_PASS in environment.");
+  console.warn("No MongoDB URI configured. Set MONGODB_URI or MONGODB_URI in environment.");
 }
 
 const options = {
@@ -18,17 +18,9 @@ const options = {
   },
 };
 
-// Export an object with a connect() method and a `client` property that is set after connect.
-const exported = {
-  client: null,
-  async connect() {
-    if (!uri) throw new Error("MongoDB URI is not configured.");
-    if (!exported.client) {
-      exported.client = new MongoClient(uri, options);
-      await exported.client.connect();
-    }
-    return exported.client;
-  },
-};
+// Create the MongoClient instance immediately (so controllers can call client.db(...) at import time).
+const mongoClient = uri ? new MongoClient(uri, options) : null;
 
-module.exports = exported;
+// Export the MongoClient instance directly. The instance already provides a .connect()
+// method that can be used to establish the connection when needed.
+module.exports = mongoClient;

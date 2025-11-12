@@ -74,7 +74,11 @@ app.get("/health", async (req, res) => {
     if (client && typeof client.connect === "function") {
       await client.connect();
     }
-    await client.client.db("admin").command({ ping: 1 });
+    if (client && typeof client.db === "function") {
+      await client.db("admin").command({ ping: 1 });
+    } else {
+      throw new Error("MongoDB client is not configured");
+    }
     res.send("Solosphere Server is running");
   } catch (err) {
     console.error("Health check failed:", err);
