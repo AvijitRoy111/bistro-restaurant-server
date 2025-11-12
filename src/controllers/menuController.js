@@ -1,11 +1,10 @@
 const { ObjectId } = require("mongodb");
-const client = require("../helpers/client");
-
-const menuItemsCollection = client.db("bistroRestaurant").collection("menueITems");
+const { getCollection } = require("../helpers/mongo");
 
 
 // 1. Get All MenuItems
 const getMenuItems = async (req, res) => {
+  const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
   const MenuItems = await menuItemsCollection.find().toArray();
   res.status(200).json({ success: true, message: "All MenuItems", data: MenuItems });
 };
@@ -13,6 +12,7 @@ const getMenuItems = async (req, res) => {
 // 2.add a menuItems
 const createMenuItems = async (req, res) =>{
   const menudata = req.body;
+  const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
   const result = await menuItemsCollection.insertOne(menudata);
   res.status(200).json({success:true, massage:'add menuItems', data:result})
 }
@@ -22,6 +22,7 @@ const deleteMenuItem = async (req, res) => {
   try {
     const id = req.params.id;
     let query = { _id: new ObjectId(id) };
+    const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
     let result = await menuItemsCollection.deleteOne(query);
     if (result.deletedCount === 0) {
       query = { _id: id };
@@ -45,7 +46,8 @@ const updateMenuItem = async (req, res) => {
     const id = req.params.id;
     const updatedData = req.body;
     let query = { _id: new ObjectId(id) };
-    let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
+  const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
+  let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
     if (result.matchedCount === 0) {
       query = { _id: id };
       result = await menuItemsCollection.updateOne(query, { $set: updatedData });

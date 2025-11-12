@@ -1,7 +1,5 @@
 const { ObjectId } = require("mongodb");
-const client = require("../helpers/client");
-
-const cartsCollection = client.db("bistroRestaurant").collection("carts");
+const { getCollection } = require("../helpers/mongo");
 
 // Place Order to Database (status: pending)
 const placeOrder = async (req, res) => {
@@ -10,8 +8,9 @@ const placeOrder = async (req, res) => {
     order.status = "pending";
     order.addedAt = new Date();
 
-    const result = await cartsCollection.insertOne(order);
-    res.status(201).json({ success: true, message: "Order placed", data: result });
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.insertOne(order);
+  res.status(201).json({ success: true, message: "Order placed", data: result });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
@@ -20,8 +19,9 @@ const placeOrder = async (req, res) => {
 // Get Pending Orders
 const getPendingOrders = async (req, res) => {
   try {
-    const result = await cartsCollection.find({ status: "pending" }).toArray();
-    res.status(200).json(result);
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.find({ status: "pending" }).toArray();
+  res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
@@ -33,6 +33,7 @@ const updateOrderStatus = async (req, res) => {
     const { id } = req.params;
     const { status } = req.body;
 
+    const cartsCollection = await getCollection("bistroRestaurant", "carts");
     const result = await cartsCollection.updateOne(
       { _id: new ObjectId(id) },
       { $set: { status } }
@@ -48,8 +49,9 @@ const updateOrderStatus = async (req, res) => {
 const deleteOrder = async (req, res) => {
   try {
     const { id } = req.params;
-    const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
-    res.json({ success: true, message: "Order deleted", data: result });
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
+  res.json({ success: true, message: "Order deleted", data: result });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

@@ -1,12 +1,11 @@
 // src/controllers/reviewController.js
 const { ObjectId } = require("mongodb");
-const client = require("../helpers/client");
-
-const reviewsCollection = client.db("bistroRestaurant").collection("reveiws");
+const { getCollection } = require("../helpers/mongo");
 
 
 // 1. Get All reveiws
 const getreveiws = async (req, res) => {
+  const reviewsCollection = await getCollection("bistroRestaurant", "reveiws");
   const reveiws = await reviewsCollection.find().toArray();
   res.status(200).json({ success: true, message: "All reveiws", data: reveiws });
 };
@@ -14,6 +13,7 @@ const getreveiws = async (req, res) => {
 // 2. Create reveiw
 const createreveiws = async (req, res) => {
   const reveiwData = req.body;
+  const reviewsCollection = await getCollection("bistroRestaurant", "reveiws");
   const result = await reviewsCollection.insertOne(reveiwData);
   res.status(200).json({ success: true, message: "reveiws created", data: result });
 };

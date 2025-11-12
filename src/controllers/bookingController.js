@@ -1,10 +1,9 @@
 const { ObjectId } = require("mongodb");
-const client = require("../helpers/client");
-
-const bookingsCollection = client.db("bistroRestaurant").collection("bookings");
+const { getCollection } = require("../helpers/mongo");
 
 // Get All Bookings
 const getBookings = async (req, res) => {
+  const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const bookings = await bookingsCollection.find().toArray();
   res.status(200).json({ success: true, message: "All bookings", data: bookings });
 };
@@ -12,6 +11,7 @@ const getBookings = async (req, res) => {
 // Create Booking
 const createBooking = async (req, res) => {
   const bookingData = req.body;
+  const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const result = await bookingsCollection.insertOne(bookingData);
   res.status(200).json({ success: true, message: "Booking created", data: result });
 };
@@ -21,6 +21,7 @@ const updateBooking = async (req, res) => {
   const id = req.params.id;
   const { status } = req.body;
 
+  const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const result = await bookingsCollection.updateOne(
     { _id: new ObjectId(id) },
     { $set: { status } }
@@ -32,6 +33,7 @@ const updateBooking = async (req, res) => {
 // Delete Booking
 const deleteBooking = async (req, res) => {
   const id = req.params.id;
+  const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
 
   if (result.deletedCount === 0) {
