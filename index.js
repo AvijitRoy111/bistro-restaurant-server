@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const menuRoutes = require("./src/routes/menuroutes");
 const reviewRoutes = require("./src/routes/reveiwroutes");
 const cartRoutes = require("./src/routes/cartroutes");
-const  bookingRoutes = require("./src/routes/bookingroutes")
+const bookingRoutes = require("./src/routes/bookingroutes")
 const orderRoutes = require("./src/routes/orderroutes")
 const contactRoutes = require("./src/routes/contactroutes")
 const usersRoutes= require("./src/routes/userroutes")
@@ -39,7 +39,7 @@ app.get("/", (req, res)=> {
 
 //   res.cookie("token", token, {
 //     httpOnly: true,
-//     secure: process.env.NODE_ENV === "production",
+//     secure: process.env.NODE_ENV === "produnction",
 //     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
 //   }).send({ success: true });
 // });
@@ -78,5 +78,5 @@ app.use((req, res) => {
 });
 
 // ----------- SERVER RUN -----------
-module.exports = app;
-// app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+// module.exports = app;
+app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
