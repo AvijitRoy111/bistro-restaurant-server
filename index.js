@@ -74,4 +74,5 @@ app.use((req, res) => {
 });
 
 // ----------- SERVER RUN -----------
-app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
+module.exports = app;
+//app.listen(port, () => console.log(`Solosphere Server running on port ${port}`));
