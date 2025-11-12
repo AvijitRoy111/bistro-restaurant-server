@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
     // Import Routes
 const menuRoutes = require("./src/routes/menuroutes");
@@ -27,29 +26,29 @@ app.use(express.json());
 app.use(cookieParser());
 
 // ----------- JWT CREATE -----------
-app.post("/jwt", async (req, res) => {
-  const user = req.body;
-  if (!user?.email)
-    return res.status(400).send({ success: false, message: "Email required" });
+// app.post("/jwt", async (req, res) => {
+//   const user = req.body;
+//   if (!user?.email)
+//     return res.status(400).send({ success: false, message: "Email required" });
 
-  const token = jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn: "365d" });
+//   const token = jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn: "365d" });
 
-  res.cookie("token", token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-  }).send({ success: true });
-});
+//   res.cookie("token", token, {
+//     httpOnly: true,
+//     secure: process.env.NODE_ENV === "production",
+//     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+//   }).send({ success: true });
+// });
 
 // ----------- LOGOUT -----------
-app.get("/log-out", (req, res) => {
-  res.clearCookie("token", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    maxAge: 0,
-  }).send({ success: true });
-});
+// app.get("/log-out", (req, res) => {
+//   res.clearCookie("token", {
+//     httpOnly: true,
+//     secure: process.env.NODE_ENV === "production",
+//     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+//     maxAge: 0,
+//   }).send({ success: true });
+// });
 
 
 
