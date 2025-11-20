@@ -54,11 +54,11 @@
 //   res.status(200).json({ success: true, message: "order deleted", data: result });
 // };
 
-// module.exports =
-// {
-//   createCarts,
-//   getCarts,
-//   updateCartStatus,
-//   getAllOrders,
-//   deleteOrder
-// };
+module.exports =
+{
+  createCarts,
+  getCarts,
+  updateCartStatus,
+  getAllOrders,
+  deleteOrder
+};
