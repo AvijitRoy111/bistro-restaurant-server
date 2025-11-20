@@ -16,19 +16,19 @@
 //   res.status(200).json({ success: true, message: "Booking created", data: result });
 // };
 
-// //  Update Booking Status
-// const updateBooking = async (req, res) => {
-//   const id = req.params.id;
-//   const { status } = req.body;
+//  Update Booking Status
+const updateBooking = async (req, res) => {
+  const id = req.params.id;
+  const { status } = req.body;
 
-//   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
-//   const result = await bookingsCollection.updateOne(
-//     { _id: new ObjectId(id) },
-//     { $set: { status } }
-//   );
+  const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
+  const result = await bookingsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
 
-//   res.status(200).json({ success: true, message: "Booking status updated", data: result });
-// };
+  res.status(200).json({ success: true, message: "Booking status updated", data: result });
+};
 
 // Delete Booking
 const deleteBooking = async (req, res) => {
