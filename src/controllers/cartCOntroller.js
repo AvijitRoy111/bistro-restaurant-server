@@ -1,18 +1,18 @@
 // const { ObjectId } = require("mongodb");
 // const { getCollection } = require("../helpers/mongo");
 
-// // Add item to cart
-// const createCarts = async (req, res) => {
-//   const { name, image, recipe, price, userName, userEmail } = req.body;
+// Add item to cart
+const createCarts = async (req, res) => {
+  const { name, image, recipe, price, userName, userEmail } = req.body;
 
-//   if (!name || !image || !recipe || !price || !userEmail)
-//     return res.status(400).send({ success: false, message: "Missing fields!" });
+  if (!name || !image || !recipe || !price || !userEmail)
+    return res.status(400).send({ success: false, message: "Missing fields!" });
 
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const newCart = { name, image, recipe, price, userName, userEmail, addedAt: new Date() };
-//   const result = await cartsCollection.insertOne(newCart);
-//   res.send(result);
-// };
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const newCart = { name, image, recipe, price, userName, userEmail, addedAt: new Date() };
+  const result = await cartsCollection.insertOne(newCart);
+  res.send(result);
+};
 
 // Get user's cart
 const getCarts = async (req, res) => {
