@@ -1,4 +1,3 @@
-// src/controllers/reviewController.js
 const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
