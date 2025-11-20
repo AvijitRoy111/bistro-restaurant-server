@@ -22,19 +22,19 @@
 //   res.send(result);
 // };
 
-// // Update order status
-// const updateCartStatus = async (req, res) => {
-//   const { id } = req.params;
-//   const { status } = req.body;
+// Update order status
+const updateCartStatus = async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
 
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const result = await cartsCollection.updateOne(
-//     { _id: new ObjectId(id) },
-//     { $set: { status } }
-//   );
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
 
-//   res.send({ success: true, data: result });
-// };
+  res.send({ success: true, data: result });
+};
 
 // Get all or filtered orders (for ManageOrder)
 const getAllOrders = async (req, res) => {
