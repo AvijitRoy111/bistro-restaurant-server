@@ -1,6 +1,6 @@
-// // src/controllers/reviewController.js
-// const { ObjectId } = require("mongodb");
-// const { getCollection } = require("../helpers/mongo");
+// src/controllers/reviewController.js
+const { ObjectId } = require("mongodb");
+const { getCollection } = require("../helpers/mongo");
 
 
 // 1. Get All reveiws
