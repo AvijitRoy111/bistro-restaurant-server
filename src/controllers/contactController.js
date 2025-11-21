@@ -24,7 +24,7 @@
 // };
 
 
-// module.exports = {
+module.exports = {
     addedContact,
     getAllContact,
     deleteContact
