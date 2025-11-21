@@ -58,8 +58,8 @@
 // };
 
 // module.exports = {
-//   placeOrder,
-//   getPendingOrders,
+  placeOrder,
+  getPendingOrders,
   updateOrderStatus,
   deleteOrder,
 };
