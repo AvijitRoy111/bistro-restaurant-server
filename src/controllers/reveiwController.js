@@ -19,7 +19,7 @@
 
 
 
-// module.exports = {
-//     getreveiws,
-//     createreveiws
-// };
+module.exports = {
+    getreveiws,
+    createreveiws
+};
