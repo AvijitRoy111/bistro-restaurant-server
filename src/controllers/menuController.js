@@ -67,7 +67,7 @@
 // module.exports = {
 //     getMenuItems,
 //     createMenuItems,
-//     deleteMenuItem,
-//      updateMenuItem
+    deleteMenuItem,
+     updateMenuItem
 
-// };
+};
