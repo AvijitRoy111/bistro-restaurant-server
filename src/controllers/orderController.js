@@ -16,16 +16,16 @@
 //   }
 // };
 
-// // Get Pending Orders
-// const getPendingOrders = async (req, res) => {
-//   try {
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const result = await cartsCollection.find({ status: "pending" }).toArray();
-//   res.status(200).json(result);
-//   } catch (err) {
-//     res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+// Get Pending Orders
+const getPendingOrders = async (req, res) => {
+  try {
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.find({ status: "pending" }).toArray();
+  res.status(200).json(result);
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
 
 // Update Order Status
 const updateOrderStatus = async (req, res) => {
