@@ -65,8 +65,8 @@
 // };
 
 // module.exports = {
-//     getMenuItems,
-//     createMenuItems,
+    getMenuItems,
+    createMenuItems,
     deleteMenuItem,
      updateMenuItem
 
