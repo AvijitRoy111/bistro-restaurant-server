@@ -60,6 +60,6 @@
 // module.exports = {
 //   placeOrder,
 //   getPendingOrders,
-//   updateOrderStatus,
-//   deleteOrder,
-// };
+  updateOrderStatus,
+  deleteOrder,
+};
