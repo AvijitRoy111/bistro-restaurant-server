@@ -53,16 +53,16 @@
 //       result = await menuItemsCollection.updateOne(query, { $set: updatedData });
 //     }
 
-//     if (result.modifiedCount > 0) {
-//       res.status(200).json({ success: true, message: "Menu item updated successfully" });
-//     } else {
-//       res.status(404).json({ success: false, message: "Item not found or no change" });
-//     }
-//   } catch (error) {
-//     console.error("Update error:", error);
-//     res.status(500).json({ success: false, message: "Failed to update item", error });
-//   }
-// };
+    if (result.modifiedCount > 0) {
+      res.status(200).json({ success: true, message: "Menu item updated successfully" });
+    } else {
+      res.status(404).json({ success: false, message: "Item not found or no change" });
+    }
+  } catch (error) {
+    console.error("Update error:", error);
+    res.status(500).json({ success: false, message: "Failed to update item", error });
+  }
+};
 
 module.exports = {
     getMenuItems,
