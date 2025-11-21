@@ -40,8 +40,8 @@
 //   }
 // };
 
-// // 🆕 Update menu item
-// const updateMenuItem = async (req, res) => {
+// 🆕 Update menu item
+const updateMenuItem = async (req, res) => {
   try {
     const id = req.params.id;
     const updatedData = req.body;
