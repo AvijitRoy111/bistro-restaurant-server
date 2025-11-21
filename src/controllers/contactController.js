@@ -25,7 +25,7 @@
 
 
 // module.exports = {
-//     addedContact,
-//     getAllContact,
+    addedContact,
+    getAllContact,
     deleteContact
 };
