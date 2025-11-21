@@ -1,20 +1,20 @@
 // const { ObjectId } = require("mongodb");
 // const { getCollection } = require("../helpers/mongo");
 
-// // Place Order to Database (status: pending)
-// const placeOrder = async (req, res) => {
-//   try {
-//     const order = req.body;
-//     order.status = "pending";
-//     order.addedAt = new Date();
+// Place Order to Database (status: pending)
+const placeOrder = async (req, res) => {
+  try {
+    const order = req.body;
+    order.status = "pending";
+    order.addedAt = new Date();
 
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const result = await cartsCollection.insertOne(order);
-//   res.status(201).json({ success: true, message: "Order placed", data: result });
-//   } catch (err) {
-//     res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const result = await cartsCollection.insertOne(order);
+  res.status(201).json({ success: true, message: "Order placed", data: result });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
 
 // Get Pending Orders
 const getPendingOrders = async (req, res) => {
