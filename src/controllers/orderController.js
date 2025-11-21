@@ -57,7 +57,7 @@
 //   }
 // };
 
-// module.exports = {
+module.exports = {
   placeOrder,
   getPendingOrders,
   updateOrderStatus,
