@@ -27,11 +27,11 @@
 //   }
 // };
 
-// // Update Order Status
-// const updateOrderStatus = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const { status } = req.body;
+// Update Order Status
+const updateOrderStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
 
     const cartsCollection = await getCollection("bistroRestaurant", "carts");
     const result = await cartsCollection.updateOne(
