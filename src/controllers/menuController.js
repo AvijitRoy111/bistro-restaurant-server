@@ -42,16 +42,16 @@
 
 // // 🆕 Update menu item
 // const updateMenuItem = async (req, res) => {
-//   try {
-//     const id = req.params.id;
-//     const updatedData = req.body;
-//     let query = { _id: new ObjectId(id) };
-//   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
-//   let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
-//     if (result.matchedCount === 0) {
-//       query = { _id: id };
-//       result = await menuItemsCollection.updateOne(query, { $set: updatedData });
-//     }
+  try {
+    const id = req.params.id;
+    const updatedData = req.body;
+    let query = { _id: new ObjectId(id) };
+  const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
+  let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
+    if (result.matchedCount === 0) {
+      query = { _id: id };
+      result = await menuItemsCollection.updateOne(query, { $set: updatedData });
+    }
 
     if (result.modifiedCount > 0) {
       res.status(200).json({ success: true, message: "Menu item updated successfully" });
