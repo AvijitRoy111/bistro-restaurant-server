@@ -64,7 +64,7 @@
 //   }
 // };
 
-// module.exports = {
+module.exports = {
     getMenuItems,
     createMenuItems,
     deleteMenuItem,
