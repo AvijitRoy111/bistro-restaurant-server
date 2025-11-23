@@ -1,4 +1,4 @@
-// const client = require("./client");
+const client = require("./client");
 
 async function ensureConnected() {
   if (!client) throw new Error("MONGODB_URI is not configured");
