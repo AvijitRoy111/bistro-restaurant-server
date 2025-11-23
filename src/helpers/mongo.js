@@ -9,10 +9,10 @@
 //   }
 // }
 
-// async function getCollection(dbName, collName) {
-//   await ensureConnected();
-//   return client.db(dbName).collection(collName);
-// }
+async function getCollection(dbName, collName) {
+  await ensureConnected();
+  return client.db(dbName).collection(collName);
+}
 
 module.exports = {
   getCollection,
