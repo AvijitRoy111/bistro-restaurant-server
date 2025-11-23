@@ -14,6 +14,6 @@
 //   return client.db(dbName).collection(collName);
 // }
 
-// module.exports = {
-//   getCollection,
-// };
+module.exports = {
+  getCollection,
+};
