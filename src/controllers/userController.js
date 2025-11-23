@@ -21,12 +21,12 @@
 //   }
 // };
 
-// // 2 Get all users
-// const getAllUsers = async (req, res) => {
-//   const usersCollection = await getCollection("bistroRestaurant", "users");
-//   const result = await usersCollection.find().toArray();
-//   res.status(200).json({ success: true, message: "Get all users", data: result });
-// };
+// 2 Get all users
+const getAllUsers = async (req, res) => {
+  const usersCollection = await getCollection("bistroRestaurant", "users");
+  const result = await usersCollection.find().toArray();
+  res.status(200).json({ success: true, message: "Get all users", data: result });
+};
 
 // 3 Delete user
 const deleteUser = async (req, res) => {
