@@ -3,15 +3,15 @@
 
 // // 1.Create user (with duplicate check)
 // const createUsers = async (req, res) => {
-//   try {
-//     const userData = req.body;
+  try {
+    const userData = req.body;
 
-//     // check if user already exists by email
-//   const usersCollection = await getCollection("bistroRestaurant", "users");
-//   const existingUser = await usersCollection.findOne({ email: userData.email });
-//     if (existingUser) {
-//       return res.status(200).json({ success: true, message: "User already exists" });
-//     }
+    // check if user already exists by email
+  const usersCollection = await getCollection("bistroRestaurant", "users");
+  const existingUser = await usersCollection.findOne({ email: userData.email });
+    if (existingUser) {
+      return res.status(200).json({ success: true, message: "User already exists" });
+    }
 
     // insert new user
   const result = await usersCollection.insertOne(userData);
