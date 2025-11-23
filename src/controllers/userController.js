@@ -13,13 +13,13 @@
 //       return res.status(200).json({ success: true, message: "User already exists" });
 //     }
 
-//     // insert new user
-//   const result = await usersCollection.insertOne(userData);
-//     res.status(200).json({ success: true, message: "User added successfully", data: result });
-//   } catch (error) {
-//     res.status(500).json({ success: false, message: "Error creating user", error: error.message });
-//   }
-// };
+    // insert new user
+  const result = await usersCollection.insertOne(userData);
+    res.status(200).json({ success: true, message: "User added successfully", data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error creating user", error: error.message });
+  }
+};
 
 // 2 Get all users
 const getAllUsers = async (req, res) => {
