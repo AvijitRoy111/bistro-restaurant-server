@@ -1,12 +1,12 @@
 const express = require("express");
-// const verifyToken = require("../midilewares/verifyToken");
-// const { 
-//     createCarts, 
-//     getCarts, 
-//     updateCartStatus, 
-//     getAllOrders, 
-//     deleteOrder, 
-// } = require("../controllers/cartCOntroller");
+const verifyToken = require("../midilewares/verifyToken");
+const { 
+    createCarts, 
+    getCarts, 
+    updateCartStatus, 
+    getAllOrders, 
+    deleteOrder, 
+} = require("../controllers/cartCOntroller");
 
 const router = express.Router();
 
