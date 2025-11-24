@@ -6,11 +6,11 @@
 //   const token = req.cookies?.token;
 //   if (!token) return res.status(401).send({ message: "Unauthorized - no token" });
 
-//   jwt.verify(token, ACCESS_SECRET_TOKEN, (err, decoded) => {
-//     if (err) return res.status(403).send({ message: "Invalid token" });
-//     req.user = decoded;
-//     next();
-//   });
-// };
+  jwt.verify(token, ACCESS_SECRET_TOKEN, (err, decoded) => {
+    if (err) return res.status(403).send({ message: "Invalid token" });
+    req.user = decoded;
+    next();
+  });
+};
 
 module.exports = verifyToken;
