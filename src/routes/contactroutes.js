@@ -6,6 +6,6 @@
 
 // router.post("/", addedContact);
 // router.get("/", getAllContact);
-// router.delete("/:id", deleteContact);
+router.delete("/:id", deleteContact);
 
 module.exports = router;
