@@ -5,7 +5,7 @@
 // const router = express.Router();
 
 // router.post("/", addedContact);
-// router.get("/", getAllContact);
+router.get("/", getAllContact);
 router.delete("/:id", deleteContact);
 
 module.exports = router;
