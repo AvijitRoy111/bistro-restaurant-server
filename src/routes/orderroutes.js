@@ -6,7 +6,7 @@
 //   getPendingOrders,
 // } = require("../controllers/orderController");
 
-// const router = express.Router();
+const router = express.Router();
 
 router.post("/", placeOrder);
 router.get("/",  getPendingOrders);
