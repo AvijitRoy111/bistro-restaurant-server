@@ -4,7 +4,7 @@
 
 // const router = express.Router();
 
-// router.post("/", addedContact);
+router.post("/", addedContact);
 router.get("/", getAllContact);
 router.delete("/:id", deleteContact);
 
