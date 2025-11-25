@@ -8,4 +8,4 @@
 // router.get("/", getAllContact);
 // router.delete("/:id", deleteContact);
 
-// module.exports = router;
+module.exports = router;
