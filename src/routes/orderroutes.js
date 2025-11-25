@@ -11,6 +11,6 @@
 // router.post("/", placeOrder);
 // router.get("/",  getPendingOrders);
 // router.patch("/:id", updateOrderStatus);
-// router.delete("/:id", deleteOrder);
+router.delete("/:id", deleteOrder);
 
 module.exports = router;
