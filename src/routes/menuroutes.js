@@ -2,7 +2,7 @@
 // const verifyToken = require("../midilewares/verifyToken");
 // const { getMenuItems, createMenuItems, deleteMenuItem, updateMenuItem } = require("../controllers/menuController");
 
-// const router = express.Router();
+const router = express.Router();
 
 router.get("/", getMenuItems);
 router.post("/", createMenuItems)
