@@ -5,6 +5,6 @@
 // const router = express.Router();
 
 // router.get("/", getreveiws);
-// router.post("/", createreveiws)
+router.post("/", createreveiws)
 
 module.exports = router;
