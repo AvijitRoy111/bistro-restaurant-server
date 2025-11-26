@@ -9,4 +9,4 @@
 // router.post("/", createUsers)
 // router.delete("/:id", deleteUser);
 
-// module.exports = router;
+module.exports = router;
