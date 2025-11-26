@@ -8,7 +8,7 @@
 
 // const router = express.Router();
 
-// router.post("/", placeOrder);
+router.post("/", placeOrder);
 router.get("/",  getPendingOrders);
 router.patch("/:id", updateOrderStatus);
 router.delete("/:id", deleteOrder);
