@@ -1,10 +1,10 @@
 // const express = require("express");
-// const {
-//   updateOrderStatus,
-//   placeOrder,
-//   deleteOrder,
-//   getPendingOrders,
-// } = require("../controllers/orderController");
+const {
+  updateOrderStatus,
+  placeOrder,
+  deleteOrder,
+  getPendingOrders,
+} = require("../controllers/orderController");
 
 const router = express.Router();
 
