@@ -7,4 +7,4 @@
 // router.get("/", getreveiws);
 // router.post("/", createreveiws)
 
-// module.exports = router;
+module.exports = router;
