@@ -13,4 +13,4 @@
 // router.patch("/:id", updateOrderStatus);
 // router.delete("/:id", deleteOrder);
 
-// module.exports = router;
+module.exports = router;
