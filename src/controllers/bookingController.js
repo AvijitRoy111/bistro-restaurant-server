@@ -30,7 +30,7 @@ const updateBooking = async (req, res) => {
   res.status(200).json({ success: true, message: "Booking status updated", data: result });
 };
 
-// // Delete Booking
+// Delete Booking
 // const deleteBooking = async (req, res) => {
 //   const id = req.params.id;
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
