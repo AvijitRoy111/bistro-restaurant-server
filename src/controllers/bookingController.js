@@ -19,7 +19,7 @@ const createBooking = async (req, res) => {
 //  Update Booking Status
 const updateBooking = async (req, res) => {
   const id = req.params.id;
-//   const { status } = req.body;
+  const { status } = req.body;
 
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
 //   const result = await bookingsCollection.updateOne(
