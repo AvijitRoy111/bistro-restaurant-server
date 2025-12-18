@@ -5,7 +5,7 @@ const { getCollection } = require("../helpers/mongo");
 const getBookings = async (req, res) => {
   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const bookings = await bookingsCollection.find().toArray();
-//   res.status(200).json({ success: true, message: "All bookings", data: bookings });
+  res.status(200).json({ success: true, message: "All bookings", data: bookings });
 // };
 
 // // Create Booking
