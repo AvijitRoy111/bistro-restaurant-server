@@ -22,7 +22,7 @@ const updateBooking = async (req, res) => {
   const { status } = req.body;
 
   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
-//   const result = await bookingsCollection.updateOne(
+  const result = await bookingsCollection.updateOne(
 //     { _id: new ObjectId(id) },
 //     { $set: { status } }
 //   );
