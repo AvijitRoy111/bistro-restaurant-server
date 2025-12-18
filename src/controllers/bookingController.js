@@ -24,7 +24,7 @@ const updateBooking = async (req, res) => {
   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
   const result = await bookingsCollection.updateOne(
     { _id: new ObjectId(id) },
-//     { $set: { status } }
+    { $set: { status } }
 //   );
 
 //   res.status(200).json({ success: true, message: "Booking status updated", data: result });
