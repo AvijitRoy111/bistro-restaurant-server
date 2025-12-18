@@ -31,7 +31,7 @@ const updateBooking = async (req, res) => {
 };
 
 // Delete Booking
-// const deleteBooking = async (req, res) => {
+const deleteBooking = async (req, res) => {
 //   const id = req.params.id;
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
 //   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
