@@ -9,7 +9,7 @@ const getBookings = async (req, res) => {
 };
 
 // Create Booking
-// const createBooking = async (req, res) => {
+const createBooking = async (req, res) => {
 //   const bookingData = req.body;
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
 //   const result = await bookingsCollection.insertOne(bookingData);
