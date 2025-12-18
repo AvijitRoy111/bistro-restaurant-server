@@ -25,7 +25,7 @@ const updateBooking = async (req, res) => {
   const result = await bookingsCollection.updateOne(
     { _id: new ObjectId(id) },
     { $set: { status } }
-//   );
+  );
 
 //   res.status(200).json({ success: true, message: "Booking status updated", data: result });
 // };
