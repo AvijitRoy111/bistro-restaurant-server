@@ -2,7 +2,7 @@ const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
 // Get All Bookings
-// const getBookings = async (req, res) => {
+const getBookings = async (req, res) => {
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
 //   const bookings = await bookingsCollection.find().toArray();
 //   res.status(200).json({ success: true, message: "All bookings", data: bookings });
