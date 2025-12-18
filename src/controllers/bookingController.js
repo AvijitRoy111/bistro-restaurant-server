@@ -28,7 +28,7 @@ const updateBooking = async (req, res) => {
   );
 
   res.status(200).json({ success: true, message: "Booking status updated", data: result });
-// };
+};
 
 // // Delete Booking
 // const deleteBooking = async (req, res) => {
