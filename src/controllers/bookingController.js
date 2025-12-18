@@ -8,7 +8,7 @@ const getBookings = async (req, res) => {
   res.status(200).json({ success: true, message: "All bookings", data: bookings });
 };
 
-// // Create Booking
+// Create Booking
 // const createBooking = async (req, res) => {
 //   const bookingData = req.body;
 //   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
