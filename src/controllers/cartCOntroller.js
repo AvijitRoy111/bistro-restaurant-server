@@ -11,7 +11,7 @@ const createCarts = async (req, res) => {
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
   const newCart = { name, image, recipe, price, userName, userEmail, addedAt: new Date() };
   const result = await cartsCollection.insertOne(newCart);
-//   res.send(result);
+  res.send(result);
 // };
 
 // // Get user's cart
