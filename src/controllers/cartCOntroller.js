@@ -2,7 +2,7 @@ const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
 // Add item to cart
-// const createCarts = async (req, res) => {
+const createCarts = async (req, res) => {
 //   const { name, image, recipe, price, userName, userEmail } = req.body;
 
 //   if (!name || !image || !recipe || !price || !userEmail)
