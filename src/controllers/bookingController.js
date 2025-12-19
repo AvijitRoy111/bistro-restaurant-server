@@ -47,5 +47,5 @@ module.exports = {
   getBookings,
   createBooking,
   updateBooking,
-//   deleteBooking,
+  deleteBooking,
 // };
