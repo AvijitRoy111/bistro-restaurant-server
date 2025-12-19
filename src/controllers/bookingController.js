@@ -34,9 +34,9 @@ const updateBooking = async (req, res) => {
 const deleteBooking = async (req, res) => {
   const id = req.params.id;
   const bookingsCollection = await getCollection("bistroRestaurant", "bookings");
-//   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
+  const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
 
-//   if (result.deletedCount === 0) {
+  if (result.deletedCount === 0) {
 //     return res.status(404).json({ success: false, message: "Booking not found" });
 //   }
 
