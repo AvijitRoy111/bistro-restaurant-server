@@ -40,7 +40,7 @@ const deleteBooking = async (req, res) => {
     return res.status(404).json({ success: false, message: "Booking not found" });
   }
 
-//   res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
+  res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
 // };
 
 // module.exports = {
