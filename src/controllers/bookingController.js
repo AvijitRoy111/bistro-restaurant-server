@@ -37,7 +37,7 @@ const deleteBooking = async (req, res) => {
   const result = await bookingsCollection.deleteOne({ _id: new ObjectId(id) });
 
   if (result.deletedCount === 0) {
-//     return res.status(404).json({ success: false, message: "Booking not found" });
+    return res.status(404).json({ success: false, message: "Booking not found" });
 //   }
 
 //   res.status(200).json({ success: true, message: "Booking deleted successfully", data: result });
