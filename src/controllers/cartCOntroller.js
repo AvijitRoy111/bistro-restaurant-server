@@ -12,7 +12,7 @@ const createCarts = async (req, res) => {
   const newCart = { name, image, recipe, price, userName, userEmail, addedAt: new Date() };
   const result = await cartsCollection.insertOne(newCart);
   res.send(result);
-// };
+};
 
 // // Get user's cart
 // const getCarts = async (req, res) => {
