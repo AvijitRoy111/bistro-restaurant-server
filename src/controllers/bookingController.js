@@ -48,4 +48,4 @@ module.exports = {
   createBooking,
   updateBooking,
   deleteBooking,
-// };
+};
