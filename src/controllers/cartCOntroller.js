@@ -6,7 +6,7 @@ const createCarts = async (req, res) => {
   const { name, image, recipe, price, userName, userEmail } = req.body;
 
   if (!name || !image || !recipe || !price || !userEmail)
-//     return res.status(400).send({ success: false, message: "Missing fields!" });
+    return res.status(400).send({ success: false, message: "Missing fields!" });
 
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
 //   const newCart = { name, image, recipe, price, userName, userEmail, addedAt: new Date() };
