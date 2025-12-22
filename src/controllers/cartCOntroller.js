@@ -22,7 +22,7 @@ const getCarts = async (req, res) => {
   res.send(result);
 };
 
-// // Update order status
+// Update order status
 // const updateCartStatus = async (req, res) => {
 //   const { id } = req.params;
 //   const { status } = req.body;
