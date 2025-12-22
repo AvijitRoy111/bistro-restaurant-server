@@ -14,7 +14,7 @@ const createCarts = async (req, res) => {
   res.send(result);
 };
 
-// // Get user's cart
+// Get user's cart
 // const getCarts = async (req, res) => {
 //   const query = req.query.email ? { userEmail: req.query.email } : {};
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
