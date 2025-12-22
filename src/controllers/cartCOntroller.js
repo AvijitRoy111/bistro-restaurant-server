@@ -24,8 +24,8 @@ const getCarts = async (req, res) => {
 
 // Update order status
 const updateCartStatus = async (req, res) => {
-//   const { id } = req.params;
-//   const { status } = req.body;
+  const { id } = req.params;
+  const { status } = req.body;
 
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
 //   const result = await cartsCollection.updateOne(
