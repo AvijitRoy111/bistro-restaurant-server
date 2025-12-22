@@ -31,7 +31,7 @@ const updateCartStatus = async (req, res) => {
   const result = await cartsCollection.updateOne(
     { _id: new ObjectId(id) },
     { $set: { status } }
-//   );
+  );
 
 //   res.send({ success: true, data: result });
 // };
