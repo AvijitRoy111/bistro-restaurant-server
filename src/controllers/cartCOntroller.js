@@ -33,7 +33,7 @@ const updateCartStatus = async (req, res) => {
     { $set: { status } }
   );
 
-//   res.send({ success: true, data: result });
+  res.send({ success: true, data: result });
 // };
 
 // // Get all or filtered orders (for ManageOrder)
