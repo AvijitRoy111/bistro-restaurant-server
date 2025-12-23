@@ -43,7 +43,7 @@ const getAllOrders = async (req, res) => {
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
   const result = await cartsCollection.find(query).toArray();
   res.send(result);
-// };
+};
 
 
 // // Delete order
