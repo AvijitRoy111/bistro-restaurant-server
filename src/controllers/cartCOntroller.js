@@ -60,5 +60,5 @@ module.exports =
   getCarts,
   updateCartStatus,
   getAllOrders,
-//   deleteOrder
+  deleteOrder
 // };
