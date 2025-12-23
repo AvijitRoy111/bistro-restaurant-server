@@ -42,7 +42,7 @@ const getAllOrders = async (req, res) => {
   const query = status ? { status } : {};
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
   const result = await cartsCollection.find(query).toArray();
-//   res.send(result);
+  res.send(result);
 // };
 
 
