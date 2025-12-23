@@ -57,7 +57,7 @@ const deleteOrder = async (req, res) => {
 module.exports =
 {
   createCarts,
-//   getCarts,
+  getCarts,
 //   updateCartStatus,
 //   getAllOrders,
 //   deleteOrder
