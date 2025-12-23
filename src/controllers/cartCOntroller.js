@@ -50,7 +50,7 @@ const getAllOrders = async (req, res) => {
 const deleteOrder = async (req, res) => {
   const id = req.params.id;
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
+  const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
 //   res.status(200).json({ success: true, message: "order deleted", data: result });
 // };
 
