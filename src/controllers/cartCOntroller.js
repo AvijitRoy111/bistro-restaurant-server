@@ -37,7 +37,7 @@ const updateCartStatus = async (req, res) => {
 };
 
 // Get all or filtered orders (for ManageOrder)
-// const getAllOrders = async (req, res) => {
+const getAllOrders = async (req, res) => {
 //   const status = req.query.status;
 //   const query = status ? { status } : {};
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
