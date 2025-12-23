@@ -36,7 +36,7 @@ const updateCartStatus = async (req, res) => {
   res.send({ success: true, data: result });
 };
 
-// // Get all or filtered orders (for ManageOrder)
+// Get all or filtered orders (for ManageOrder)
 // const getAllOrders = async (req, res) => {
 //   const status = req.query.status;
 //   const query = status ? { status } : {};
