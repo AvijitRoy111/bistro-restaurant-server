@@ -46,7 +46,7 @@ const getAllOrders = async (req, res) => {
 };
 
 
-// // Delete order
+// Delete order
 // const deleteOrder = async (req, res) => {
 //   const id = req.params.id;
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
