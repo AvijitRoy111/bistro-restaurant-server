@@ -54,7 +54,7 @@ const deleteOrder = async (req, res) => {
   res.status(200).json({ success: true, message: "order deleted", data: result });
 };
 
-// module.exports =
+module.exports =
 // {
 //   createCarts,
 //   getCarts,
