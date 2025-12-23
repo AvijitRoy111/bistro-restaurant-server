@@ -58,7 +58,7 @@ module.exports =
 {
   createCarts,
   getCarts,
-//   updateCartStatus,
+  updateCartStatus,
 //   getAllOrders,
 //   deleteOrder
 // };
