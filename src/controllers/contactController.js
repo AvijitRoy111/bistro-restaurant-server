@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb");
-// const { getCollection } = require("../helpers/mongo");
+const { getCollection } = require("../helpers/mongo");
 
 // // create contact
 // const addedContact = async (req, res) => {
