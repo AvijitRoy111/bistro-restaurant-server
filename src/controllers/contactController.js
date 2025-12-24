@@ -6,7 +6,7 @@ const addedContact = async (req, res) => {
   const ContactData = req.body;
   const contactCollection = await getCollection("bistroRestaurant", "contacts");
   const result = await contactCollection.insertOne(ContactData);
-//   res.status(201).json({ success: true, message: "Contact created", data: result });
+  res.status(201).json({ success: true, message: "Contact created", data: result });
 // }
 
 
