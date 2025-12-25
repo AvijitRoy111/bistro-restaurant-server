@@ -10,7 +10,7 @@ const getMenuItems = async (req, res) => {
 };
 
 // 2.add a menuItems
-// const createMenuItems = async (req, res) =>{
+const createMenuItems = async (req, res) =>{
 //   const menudata = req.body;
 //   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
 //   const result = await menuItemsCollection.insertOne(menudata);
