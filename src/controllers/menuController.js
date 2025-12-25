@@ -13,7 +13,7 @@ const getMenuItems = async (req, res) => {
 const createMenuItems = async (req, res) =>{
   const menudata = req.body;
   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
-//   const result = await menuItemsCollection.insertOne(menudata);
+  const result = await menuItemsCollection.insertOne(menudata);
 //   res.status(200).json({success:true, massage:'add menuItems', data:result})
 // }
 
