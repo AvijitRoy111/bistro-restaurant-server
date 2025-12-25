@@ -18,7 +18,7 @@ const createMenuItems = async (req, res) =>{
 }
 
 // delete menu items
-// const deleteMenuItem = async (req, res) => {
+const deleteMenuItem = async (req, res) => {
 //   try {
 //     const id = req.params.id;
 //     let query = { _id: new ObjectId(id) };
