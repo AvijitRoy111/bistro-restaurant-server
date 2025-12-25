@@ -4,7 +4,7 @@ const { getCollection } = require("../helpers/mongo");
 
 // 1. Get All MenuItems
 const getMenuItems = async (req, res) => {
-//   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
+  const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
 //   const MenuItems = await menuItemsCollection.find().toArray();
 //   res.status(200).json({ success: true, message: "All MenuItems", data: MenuItems });
 // };
