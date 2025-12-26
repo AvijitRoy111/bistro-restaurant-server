@@ -60,7 +60,7 @@ const updateMenuItem = async (req, res) => {
     }
   } catch (error) {
     console.error("Update error:", error);
-//     res.status(500).json({ success: false, message: "Failed to update item", error });
+    res.status(500).json({ success: false, message: "Failed to update item", error });
 //   }
 // };
 
