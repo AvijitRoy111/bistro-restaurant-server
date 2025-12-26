@@ -38,7 +38,7 @@ const deleteMenuItem = async (req, res) => {
     console.error("Delete error:", error);
     res.status(500).json({ success: false, message: "Failed to delete", error });
   }
-// };
+};
 
 // // 🆕 Update menu item
 // const updateMenuItem = async (req, res) => {
