@@ -3,7 +3,7 @@ const { getCollection } = require("../helpers/mongo");
 
 // Place Order to Database (status: pending)
 const placeOrder = async (req, res) => {
-//   try {
+  try {
 //     const order = req.body;
 //     order.status = "pending";
 //     order.addedAt = new Date();
