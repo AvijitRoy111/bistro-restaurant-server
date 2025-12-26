@@ -68,6 +68,6 @@ module.exports = {
     getMenuItems,
     createMenuItems,
     deleteMenuItem,
-//      updateMenuItem
+     updateMenuItem
 
 // };
