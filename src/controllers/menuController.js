@@ -35,7 +35,7 @@ const deleteMenuItem = async (req, res) => {
       res.status(404).json({ success: false, message: "Item not found" });
     }
   } catch (error) {
-//     console.error("Delete error:", error);
+    console.error("Delete error:", error);
 //     res.status(500).json({ success: false, message: "Failed to delete", error });
 //   }
 // };
