@@ -56,7 +56,7 @@ const updateMenuItem = async (req, res) => {
     if (result.modifiedCount > 0) {
       res.status(200).json({ success: true, message: "Menu item updated successfully" });
     } else {
-//       res.status(404).json({ success: false, message: "Item not found or no change" });
+      res.status(404).json({ success: false, message: "Item not found or no change" });
 //     }
 //   } catch (error) {
 //     console.error("Update error:", error);
