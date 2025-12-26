@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb");
-// const { getCollection } = require("../helpers/mongo");
+const { getCollection } = require("../helpers/mongo");
 
 // // Place Order to Database (status: pending)
 // const placeOrder = async (req, res) => {
