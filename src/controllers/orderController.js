@@ -8,7 +8,7 @@ const placeOrder = async (req, res) => {
     order.status = "pending";
     order.addedAt = new Date();
 
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
 //   const result = await cartsCollection.insertOne(order);
 //   res.status(201).json({ success: true, message: "Order placed", data: result });
 //   } catch (err) {
