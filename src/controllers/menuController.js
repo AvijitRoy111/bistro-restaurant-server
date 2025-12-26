@@ -67,7 +67,7 @@ const updateMenuItem = async (req, res) => {
 module.exports = {
     getMenuItems,
     createMenuItems,
-//     deleteMenuItem,
+    deleteMenuItem,
 //      updateMenuItem
 
 // };
