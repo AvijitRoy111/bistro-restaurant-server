@@ -30,7 +30,7 @@ const deleteMenuItem = async (req, res) => {
     }
 
     if (result.deletedCount === 1) {
-//       res.status(200).json({ success: true, message: "Menu item deleted" });
+      res.status(200).json({ success: true, message: "Menu item deleted" });
 //     } else {
 //       res.status(404).json({ success: false, message: "Item not found" });
 //     }
