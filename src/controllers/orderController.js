@@ -14,7 +14,7 @@ const placeOrder = async (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
-// };
+};
 
 // // Get Pending Orders
 // const getPendingOrders = async (req, res) => {
