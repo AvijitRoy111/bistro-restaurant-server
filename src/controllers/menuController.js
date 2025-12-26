@@ -50,7 +50,7 @@ const updateMenuItem = async (req, res) => {
   let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
     if (result.matchedCount === 0) {
       query = { _id: id };
-//       result = await menuItemsCollection.updateOne(query, { $set: updatedData });
+      result = await menuItemsCollection.updateOne(query, { $set: updatedData });
 //     }
 
 //     if (result.modifiedCount > 0) {
