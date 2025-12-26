@@ -13,7 +13,7 @@ const placeOrder = async (req, res) => {
   res.status(201).json({ success: true, message: "Order placed", data: result });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
-//   }
+  }
 // };
 
 // // Get Pending Orders
