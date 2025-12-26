@@ -12,7 +12,7 @@ const placeOrder = async (req, res) => {
   const result = await cartsCollection.insertOne(order);
   res.status(201).json({ success: true, message: "Order placed", data: result });
   } catch (err) {
-//     res.status(500).json({ success: false, message: err.message });
+    res.status(500).json({ success: false, message: err.message });
 //   }
 // };
 
