@@ -22,7 +22,7 @@ const getPendingOrders = async (req, res) => {
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
   const result = await cartsCollection.find({ status: "pending" }).toArray();
   res.status(200).json(result);
-//   } catch (err) {
+  } catch (err) {
 //     res.status(500).json({ success: false, message: err.message });
 //   }
 // };
