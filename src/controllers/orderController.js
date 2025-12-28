@@ -54,8 +54,8 @@ const deleteOrder = async (req, res) => {
   res.json({ success: true, message: "Order deleted", data: result });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+  }
+};
 
 // module.exports = {
 //   placeOrder,
