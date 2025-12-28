@@ -53,7 +53,7 @@ const deleteOrder = async (req, res) => {
   const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
   res.json({ success: true, message: "Order deleted", data: result });
   } catch (err) {
-//     res.status(500).json({ success: false, message: err.message });
+    res.status(500).json({ success: false, message: err.message });
 //   }
 // };
 
