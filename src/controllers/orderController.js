@@ -48,8 +48,8 @@ const updateOrderStatus = async (req, res) => {
 //  Delete Order
 const deleteOrder = async (req, res) => {
   try {
-//     const { id } = req.params;
-//   const cartsCollection = await getCollection("bistroRestaurant", "carts");
+    const { id } = req.params;
+  const cartsCollection = await getCollection("bistroRestaurant", "carts");
 //   const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
 //   res.json({ success: true, message: "Order deleted", data: result });
 //   } catch (err) {
