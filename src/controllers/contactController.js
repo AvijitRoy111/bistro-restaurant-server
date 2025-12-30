@@ -20,7 +20,7 @@ const deleteContact = async (req, res) => {
   const id = req.params.id;
   const contactCollection = await getCollection("bistroRestaurant", "contacts");
   const result = await contactCollection.deleteOne({ _id: new ObjectId(id) });
-//   res.status(200).json({ success: true, message: "Contact deleted", data: result });
+  res.status(200).json({ success: true, message: "Contact deleted", data: result });
 // };
 
 
