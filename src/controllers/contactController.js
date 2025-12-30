@@ -14,7 +14,7 @@ const getAllContact = async (req, res) => {
   const contactCollection = await getCollection("bistroRestaurant", "contacts");
   const Contacts = await contactCollection.find().toArray();
   res.status(200).json({ success: true, message: "All Contacts", data: Contacts });
-// };
+};
 
 // const deleteContact = async (req, res) => {
 //   const id = req.params.id;
