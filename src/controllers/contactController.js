@@ -1,7 +1,7 @@
 const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
-// // create contact
+// create contact
 // const addedContact = async (req, res) => {
 //   const ContactData = req.body;
 //   const contactCollection = await getCollection("bistroRestaurant", "contacts");
