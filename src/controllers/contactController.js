@@ -27,5 +27,5 @@ const deleteContact = async (req, res) => {
 module.exports = {
     addedContact,
     getAllContact,
-//     deleteContact
+    deleteContact
 // };
