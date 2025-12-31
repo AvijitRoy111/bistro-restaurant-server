@@ -9,7 +9,7 @@ const getMenuItems = async (req, res) => {
   res.status(200).json({ success: true, message: "All MenuItems", data: MenuItems });
 };
 
-// // 2.add a menuItems
+// 2.add a menuItems
 // const createMenuItems = async (req, res) =>{
 //   const menudata = req.body;
 //   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
