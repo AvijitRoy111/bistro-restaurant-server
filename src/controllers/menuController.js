@@ -15,7 +15,7 @@ const createMenuItems = async (req, res) =>{
   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
   const result = await menuItemsCollection.insertOne(menudata);
   res.status(200).json({success:true, massage:'add menuItems', data:result})
-// }
+}
 
 // // delete menu items
 // const deleteMenuItem = async (req, res) => {
