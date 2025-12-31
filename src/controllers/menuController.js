@@ -26,7 +26,7 @@ const deleteMenuItem = async (req, res) => {
     let result = await menuItemsCollection.deleteOne(query);
     if (result.deletedCount === 0) {
       query = { _id: id };
-//       result = await menuItemsCollection.deleteOne(query);
+      result = await menuItemsCollection.deleteOne(query);
 //     }
 
 //     if (result.deletedCount === 1) {
