@@ -17,7 +17,7 @@ const createMenuItems = async (req, res) =>{
   res.status(200).json({success:true, massage:'add menuItems', data:result})
 }
 
-// // delete menu items
+// delete menu items
 // const deleteMenuItem = async (req, res) => {
 //   try {
 //     const id = req.params.id;
