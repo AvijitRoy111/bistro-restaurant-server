@@ -19,7 +19,7 @@ const createMenuItems = async (req, res) =>{
 
 // delete menu items
 const deleteMenuItem = async (req, res) => {
-//   try {
+  try {
 //     const id = req.params.id;
 //     let query = { _id: new ObjectId(id) };
 //     const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
