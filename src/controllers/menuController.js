@@ -58,7 +58,7 @@ const updateMenuItem = async (req, res) => {
     } else {
       res.status(404).json({ success: false, message: "Item not found or no change" });
     }
-//   } catch (error) {
+  } catch (error) {
 //     console.error("Update error:", error);
 //     res.status(500).json({ success: false, message: "Failed to update item", error });
 //   }
