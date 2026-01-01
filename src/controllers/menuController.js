@@ -62,7 +62,7 @@ const updateMenuItem = async (req, res) => {
     console.error("Update error:", error);
     res.status(500).json({ success: false, message: "Failed to update item", error });
   }
-// };
+};
 
 // module.exports = {
 //     getMenuItems,
