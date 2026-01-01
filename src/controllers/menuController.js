@@ -40,7 +40,7 @@ const deleteMenuItem = async (req, res) => {
   }
 };
 
-// // Update menu item
+// Update menu item
 // const updateMenuItem = async (req, res) => {
 //   try {
 //     const id = req.params.id;
