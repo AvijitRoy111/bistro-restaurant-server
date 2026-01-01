@@ -64,10 +64,10 @@ const updateMenuItem = async (req, res) => {
   }
 };
 
-// module.exports = {
-//     getMenuItems,
-//     createMenuItems,
-//     deleteMenuItem,
-//      updateMenuItem
+module.exports = {
+    getMenuItems,
+    createMenuItems,
+    deleteMenuItem,
+     updateMenuItem
 
-// };
+};
