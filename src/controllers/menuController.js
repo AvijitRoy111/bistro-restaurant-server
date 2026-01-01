@@ -47,7 +47,7 @@ const updateMenuItem = async (req, res) => {
     const updatedData = req.body;
     let query = { _id: new ObjectId(id) };
   const menuItemsCollection = await getCollection("bistroRestaurant", "menueITems");
-//   let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
+  let result = await menuItemsCollection.updateOne(query, { $set: updatedData });
 //     if (result.matchedCount === 0) {
 //       query = { _id: id };
 //       result = await menuItemsCollection.updateOne(query, { $set: updatedData });
