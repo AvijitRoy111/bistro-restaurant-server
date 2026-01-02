@@ -61,5 +61,5 @@ module.exports = {
   placeOrder,
   getPendingOrders,
   updateOrderStatus,
-//   deleteOrder,
+  deleteOrder,
 // };
