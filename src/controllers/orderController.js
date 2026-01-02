@@ -9,9 +9,9 @@ const placeOrder = async (req, res) => {
     order.addedAt = new Date();
 
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//   const result = await cartsCollection.insertOne(order);
-//   res.status(201).json({ success: true, message: "Order placed", data: result });
-//   } catch (err) {
+  const result = await cartsCollection.insertOne(order);
+  res.status(201).json({ success: true, message: "Order placed", data: result });
+  } catch (err) {
 //     res.status(500).json({ success: false, message: err.message });
 //   }
 // };
