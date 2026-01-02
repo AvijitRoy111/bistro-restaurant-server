@@ -5,7 +5,7 @@ const { getCollection } = require("../helpers/mongo");
 const placeOrder = async (req, res) => {
   try {
     const order = req.body;
-//     order.status = "pending";
+    order.status = "pending";
 //     order.addedAt = new Date();
 
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
