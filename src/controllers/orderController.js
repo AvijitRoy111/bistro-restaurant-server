@@ -37,7 +37,7 @@ const updateOrderStatus = async (req, res) => {
     const result = await cartsCollection.updateOne(
       { _id: new ObjectId(id) },
       { $set: { status } }
-//     );
+    );
 
 //     res.json({ success: true, message: "Status updated", data: result });
 //   } catch (err) {
