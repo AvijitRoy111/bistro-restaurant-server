@@ -40,7 +40,7 @@ const updateOrderStatus = async (req, res) => {
     );
 
     res.json({ success: true, message: "Status updated", data: result });
-//   } catch (err) {
+  } catch (err) {
 //     res.status(500).json({ success: false, message: err.message });
 //   }
 // };
