@@ -27,7 +27,7 @@ const getPendingOrders = async (req, res) => {
   }
 };
 
-// // Update Order Status
+// Update Order Status
 // const updateOrderStatus = async (req, res) => {
 //   try {
 //     const { id } = req.params;
