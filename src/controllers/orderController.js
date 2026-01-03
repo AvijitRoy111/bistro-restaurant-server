@@ -34,7 +34,7 @@ const updateOrderStatus = async (req, res) => {
     const { status } = req.body;
 
     const cartsCollection = await getCollection("bistroRestaurant", "carts");
-//     const result = await cartsCollection.updateOne(
+    const result = await cartsCollection.updateOne(
 //       { _id: new ObjectId(id) },
 //       { $set: { status } }
 //     );
