@@ -17,7 +17,7 @@ const placeOrder = async (req, res) => {
 };
 
 // Get Pending Orders
-// const getPendingOrders = async (req, res) => {
+const getPendingOrders = async (req, res) => {
 //   try {
 //   const cartsCollection = await getCollection("bistroRestaurant", "carts");
 //   const result = await cartsCollection.find({ status: "pending" }).toArray();
