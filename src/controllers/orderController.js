@@ -41,9 +41,9 @@ const updateOrderStatus = async (req, res) => {
 
     res.json({ success: true, message: "Status updated", data: result });
   } catch (err) {
-//     res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
 
 // //  Delete Order
 // const deleteOrder = async (req, res) => {
