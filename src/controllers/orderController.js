@@ -25,7 +25,7 @@ const getPendingOrders = async (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
-// };
+};
 
 // // Update Order Status
 // const updateOrderStatus = async (req, res) => {
