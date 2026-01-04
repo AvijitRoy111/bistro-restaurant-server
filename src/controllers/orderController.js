@@ -58,7 +58,7 @@ const deleteOrder = async (req, res) => {
 };
 
 module.exports = {
-//   placeOrder,
+  placeOrder,
 //   getPendingOrders,
 //   updateOrderStatus,
 //   deleteOrder,
