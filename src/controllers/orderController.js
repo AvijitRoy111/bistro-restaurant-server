@@ -45,7 +45,7 @@ const updateOrderStatus = async (req, res) => {
   }
 };
 
-// //  Delete Order
+//  Delete Order
 // const deleteOrder = async (req, res) => {
 //   try {
 //     const { id } = req.params;
