@@ -51,7 +51,7 @@ const deleteOrder = async (req, res) => {
     const { id } = req.params;
   const cartsCollection = await getCollection("bistroRestaurant", "carts");
   const result = await cartsCollection.deleteOne({ _id: new ObjectId(id) });
-//   res.json({ success: true, message: "Order deleted", data: result });
+  res.json({ success: true, message: "Order deleted", data: result });
 //   } catch (err) {
 //     res.status(500).json({ success: false, message: err.message });
 //   }
