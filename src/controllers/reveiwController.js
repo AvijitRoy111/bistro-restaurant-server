@@ -2,7 +2,7 @@ const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
 
-// // 1. Get All reveiws
+// 1. Get All reveiws
 // const getreveiws = async (req, res) => {
 //   const reviewsCollection = await getCollection("bistroRestaurant", "reveiws");
 //   const reveiws = await reviewsCollection.find().toArray();
