@@ -6,7 +6,7 @@ const { getCollection } = require("../helpers/mongo");
 const getreveiws = async (req, res) => {
   const reviewsCollection = await getCollection("bistroRestaurant", "reveiws");
   const reveiws = await reviewsCollection.find().toArray();
-//   res.status(200).json({ success: true, message: "All reveiws", data: reveiws });
+  res.status(200).json({ success: true, message: "All reveiws", data: reveiws });
 // };
 
 // // 2. Create reveiw
