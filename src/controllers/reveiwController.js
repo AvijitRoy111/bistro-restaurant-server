@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb");
-// const { getCollection } = require("../helpers/mongo");
+const { getCollection } = require("../helpers/mongo");
 
 
 // // 1. Get All reveiws
