@@ -21,5 +21,5 @@ const createreveiws = async (req, res) => {
 
 module.exports = {
     getreveiws,
-//     createreveiws
-// };
+    createreveiws
+};
