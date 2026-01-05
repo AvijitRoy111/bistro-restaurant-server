@@ -19,7 +19,7 @@ const createreveiws = async (req, res) => {
 
 
 
-// module.exports = {
-//     getreveiws,
+module.exports = {
+    getreveiws,
 //     createreveiws
 // };
