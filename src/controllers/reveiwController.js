@@ -10,7 +10,7 @@ const getreveiws = async (req, res) => {
 };
 
 // 2. Create reveiw
-// const createreveiws = async (req, res) => {
+const createreveiws = async (req, res) => {
 //   const reveiwData = req.body;
 //   const reviewsCollection = await getCollection("bistroRestaurant", "reveiws");
 //   const result = await reviewsCollection.insertOne(reveiwData);
