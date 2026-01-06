@@ -15,7 +15,7 @@ const createUsers = async (req, res) => {
 
     // insert new user
   const result = await usersCollection.insertOne(userData);
-//     res.status(200).json({ success: true, message: "User added successfully", data: result });
+    res.status(200).json({ success: true, message: "User added successfully", data: result });
 //   } catch (error) {
 //     res.status(500).json({ success: false, message: "Error creating user", error: error.message });
 //   }
