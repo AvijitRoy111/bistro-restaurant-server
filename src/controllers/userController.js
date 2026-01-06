@@ -13,7 +13,7 @@ const createUsers = async (req, res) => {
       return res.status(200).json({ success: true, message: "User already exists" });
     }
 
-//     // insert new user
+    // insert new user
 //   const result = await usersCollection.insertOne(userData);
 //     res.status(200).json({ success: true, message: "User added successfully", data: result });
 //   } catch (error) {
