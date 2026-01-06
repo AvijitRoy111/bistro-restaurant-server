@@ -3,7 +3,7 @@ const { getCollection } = require("../helpers/mongo");
 
 // 1.Create user (with duplicate check)
 const createUsers = async (req, res) => {
-//   try {
+  try {
 //     const userData = req.body;
 
 //     // check if user already exists by email
