@@ -19,9 +19,9 @@ const createUsers = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: "Error creating user", error: error.message });
   }
-// };
+};
 
-// // 2 Get all users
+// 2 Get all users
 // const getAllUsers = async (req, res) => {
 //   const usersCollection = await getCollection("bistroRestaurant", "users");
 //   const result = await usersCollection.find().toArray();
