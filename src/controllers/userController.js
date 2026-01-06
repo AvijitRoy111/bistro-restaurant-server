@@ -10,7 +10,7 @@ const createUsers = async (req, res) => {
   const usersCollection = await getCollection("bistroRestaurant", "users");
   const existingUser = await usersCollection.findOne({ email: userData.email });
     if (existingUser) {
-//       return res.status(200).json({ success: true, message: "User already exists" });
+      return res.status(200).json({ success: true, message: "User already exists" });
 //     }
 
 //     // insert new user
