@@ -1,4 +1,4 @@
-// const { ObjectId } = require("mongodb");
+const { ObjectId } = require("mongodb");
 // const { getCollection } = require("../helpers/mongo");
 
 // // 1.Create user (with duplicate check)
