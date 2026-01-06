@@ -1,7 +1,7 @@
 const { ObjectId } = require("mongodb");
 const { getCollection } = require("../helpers/mongo");
 
-// // 1.Create user (with duplicate check)
+// 1.Create user (with duplicate check)
 // const createUsers = async (req, res) => {
 //   try {
 //     const userData = req.body;
