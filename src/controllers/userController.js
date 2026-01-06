@@ -7,7 +7,7 @@ const createUsers = async (req, res) => {
     const userData = req.body;
 
     // check if user already exists by email
-//   const usersCollection = await getCollection("bistroRestaurant", "users");
+  const usersCollection = await getCollection("bistroRestaurant", "users");
 //   const existingUser = await usersCollection.findOne({ email: userData.email });
 //     if (existingUser) {
 //       return res.status(200).json({ success: true, message: "User already exists" });
