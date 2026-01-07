@@ -28,7 +28,7 @@ const getAllUsers = async (req, res) => {
   res.status(200).json({ success: true, message: "Get all users", data: result });
 };
 
-// // 3 Delete user
+// 3 Delete user
 // const deleteUser = async (req, res) => {
 //   const id = req.params.id;
 //   const query = { _id: new ObjectId(id) };
