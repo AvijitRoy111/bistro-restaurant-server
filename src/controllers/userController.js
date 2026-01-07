@@ -41,7 +41,7 @@ module.exports = {
   createUsers,
   getAllUsers,
   deleteUser,
-// };
+};
 
 
 
