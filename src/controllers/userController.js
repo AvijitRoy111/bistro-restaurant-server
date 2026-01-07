@@ -35,7 +35,7 @@ const deleteUser = async (req, res) => {
   const usersCollection = await getCollection("bistroRestaurant", "users");
   const result = await usersCollection.deleteOne(query);
   res.status(200).json({ success: true, message: "User deleted", data: result });
-// };
+};
 
 // module.exports = {
 //   createUsers,
