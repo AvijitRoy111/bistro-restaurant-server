@@ -37,8 +37,8 @@ const deleteUser = async (req, res) => {
   res.status(200).json({ success: true, message: "User deleted", data: result });
 };
 
-// module.exports = {
-//   createUsers,
+module.exports = {
+  createUsers,
 //   getAllUsers,
 //   deleteUser,
 // };
