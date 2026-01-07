@@ -29,7 +29,7 @@ const getAllUsers = async (req, res) => {
 };
 
 // 3 Delete user
-// const deleteUser = async (req, res) => {
+const deleteUser = async (req, res) => {
 //   const id = req.params.id;
 //   const query = { _id: new ObjectId(id) };
 //   const usersCollection = await getCollection("bistroRestaurant", "users");
