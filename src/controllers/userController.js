@@ -39,7 +39,7 @@ const deleteUser = async (req, res) => {
 
 module.exports = {
   createUsers,
-//   getAllUsers,
+  getAllUsers,
 //   deleteUser,
 // };
 
