@@ -8,9 +8,9 @@ const {
 
 const router = express.Router();
 
-router.get("/", getBookings);
-router.post("/", createBooking);
-router.patch("/:id", updateBooking);
-router.delete("/:id", deleteBooking); 
+// router.get("/", getBookings);
+// router.post("/", createBooking);
+// router.patch("/:id", updateBooking);
+// router.delete("/:id", deleteBooking); 
 
 // module.exports = router;
