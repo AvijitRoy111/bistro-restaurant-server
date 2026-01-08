@@ -14,6 +14,6 @@ router.post("/", createCarts);
 router.get("/", getCarts);
 router.patch("/:id", updateCartStatus);
 router.get("/orders", getAllOrders);
-// router.delete("/:id", deleteOrder)
+router.delete("/:id", deleteOrder)
 
 // module.exports = router;
