@@ -1,6 +1,6 @@
 const express = require("express");
-// const {
-//   createBooking,
+const {
+  createBooking,
 //   getBookings,
 //   updateBooking,
 //   deleteBooking,
