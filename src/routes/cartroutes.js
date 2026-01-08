@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.post("/", createCarts);
 router.get("/", getCarts);
-// router.patch("/:id", updateCartStatus);
+router.patch("/:id", updateCartStatus);
 // router.get("/orders", getAllOrders);
 // router.delete("/:id", deleteOrder)
 
