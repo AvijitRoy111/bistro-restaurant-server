@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   createBooking,
-//   getBookings,
+  getBookings,
 //   updateBooking,
 //   deleteBooking,
 // } = require("../controllers/bookingController");
