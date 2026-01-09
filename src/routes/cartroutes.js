@@ -4,7 +4,7 @@ const {
     createCarts, 
     getCarts, 
     updateCartStatus, 
-//     getAllOrders, 
+    getAllOrders, 
 //     deleteOrder, 
 // } = require("../controllers/cartCOntroller");
 
