@@ -1,5 +1,5 @@
 const express = require("express");
-// const verifyToken = require("../midilewares/verifyToken");
+const verifyToken = require("../midilewares/verifyToken");
 // const { 
 //     createCarts, 
 //     getCarts, 
