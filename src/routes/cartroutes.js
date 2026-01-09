@@ -3,7 +3,7 @@ const verifyToken = require("../midilewares/verifyToken");
 const { 
     createCarts, 
     getCarts, 
-//     updateCartStatus, 
+    updateCartStatus, 
 //     getAllOrders, 
 //     deleteOrder, 
 // } = require("../controllers/cartCOntroller");
