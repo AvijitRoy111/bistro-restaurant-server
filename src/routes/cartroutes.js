@@ -2,7 +2,7 @@ const express = require("express");
 const verifyToken = require("../midilewares/verifyToken");
 const { 
     createCarts, 
-//     getCarts, 
+    getCarts, 
 //     updateCartStatus, 
 //     getAllOrders, 
 //     deleteOrder, 
