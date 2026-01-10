@@ -4,7 +4,7 @@ const { getMenuItems, createMenuItems, deleteMenuItem, updateMenuItem } = requir
 
 const router = express.Router();
 
-// router.get("/", getMenuItems);
+router.get("/", getMenuItems);
 // router.post("/", createMenuItems)
 // router.delete("/:id", deleteMenuItem);
 // router.put("/:id", updateMenuItem);
