@@ -9,4 +9,4 @@ router.post("/", createMenuItems)
 router.delete("/:id", deleteMenuItem);
 router.put("/:id", updateMenuItem);
 
-// module.exports = router;
+module.exports = router;
