@@ -4,7 +4,7 @@ const { addedContact, getAllContact, deleteContact } = require("../controllers/c
 
 const router = express.Router();
 
-// router.post("/", addedContact);
+router.post("/", addedContact);
 // router.get("/", getAllContact);
 // router.delete("/:id", deleteContact);
 
