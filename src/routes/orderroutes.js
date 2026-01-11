@@ -4,7 +4,7 @@ const {
   placeOrder,
   deleteOrder,
   getPendingOrders,
-// } = require("../controllers/orderController");
+} = require("../controllers/orderController");
 
 // const router = express.Router();
 
