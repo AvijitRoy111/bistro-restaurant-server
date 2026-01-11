@@ -2,7 +2,7 @@ const express = require("express");
 const {
   updateOrderStatus,
   placeOrder,
-//   deleteOrder,
+  deleteOrder,
 //   getPendingOrders,
 // } = require("../controllers/orderController");
 
