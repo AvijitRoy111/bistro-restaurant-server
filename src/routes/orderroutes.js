@@ -6,11 +6,11 @@ const {
   getPendingOrders,
 } = require("../controllers/orderController");
 
-const router = express.Router();
+// const router = express.Router();
 
-router.post("/", placeOrder);
-router.get("/",  getPendingOrders);
-router.patch("/:id", updateOrderStatus);
-router.delete("/:id", deleteOrder);
+// router.post("/", placeOrder);
+// router.get("/",  getPendingOrders);
+// router.patch("/:id", updateOrderStatus);
+// router.delete("/:id", deleteOrder);
 
-module.exports = router;
+// module.exports = router;
