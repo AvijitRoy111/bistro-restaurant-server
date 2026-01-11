@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-//   updateOrderStatus,
+  updateOrderStatus,
 //   placeOrder,
 //   deleteOrder,
 //   getPendingOrders,
